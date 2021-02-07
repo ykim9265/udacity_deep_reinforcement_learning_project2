@@ -2,6 +2,7 @@
 """
 Following code was taken from the DDPG examples provided by the Udacity nanodegree deep reinforcement learning course.
 
+The code has been modified to solve the Reacher environment.
 
 DDPG Examples
 -------------
@@ -67,7 +68,7 @@ class Actor(nn.Module):
 
 
 class Critic(nn.Module):
-    """Critic (Value) Model."""
+    """Critic (Q-Function, Value) Model."""
 
     def __init__(self, state_size, action_size, seed, fcs1_units=512, fc2_units=256, dropout=0.2):
         """Initialize parameters and build model.
